@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer</title>
+    <!-- <audio autoplay loop>
+        <source src=".mp3">
+    </audio> -->
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+    section {
+        position: relative;
+        background: #161623;
+        min-height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* left circle  of background*/
+    section::before {
+        content: '';
+        position: absolute;
+        /* height and width of circle */
+        /* height: 400px;
+        width: 400px; */
+        height: 550px;
+        width: 550px;
+        background: linear-gradient(#ffc107, #e91e63);
+        border-radius: 50%;
+        /* transform: translate(-250px,-120px); */
+        transform: translate(-350px, -230px);
+    }
+
+    /* right circle of background */
+    section::after {
+        content: '';
+        position: absolute;
+        /* height and width of circle */
+        /* height: 350px;
+        width: 350px; */
+        height: 500px;
+        width: 500px;
+        background: linear-gradient(#2196f3, #31ff38);
+        border-radius: 50%;
+        transform: translate(250px, 250px);
+        /* transform: translate(250px,150px); */
+    }
+
+    /* box at the center  */
+    .box {
+        position: relative;
+        /* height  and width of the box */
+        min-width: 350px;
+        min-height: 400px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        z-index: 10;
+        padding: 20px;
+        /* for the bur ness of center box and the circles at the sides */
+        backdrop-filter: blur(25px);
+    }
+
+    .box h3 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .box .list {
+        position: relative;
+        display: flex;
+        padding: 7px ;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 27px 9px;
+        cursor: pointer;
+        /* transition: 0.5s; */
+        transition: 0.1ms;
+        /* rank are hide by overflow : hidden */
+        overflow: hidden;
+    }
+
+    .box .list:hover
+     {
+        /* background: #fff;. */
+        background: linear-gradient(#ffc107,white, #31ff38);
+        box-shadow: -15px 30px 50px rgba(255, 255, 255, 0.5);
+        /* transform : scale() for popup */
+        /* transform: scale(1.05) ; */
+        transform: scale(1.05) translateX(30px) translateY(-15px);
+        z-index: 1000;
+
+    }
+    .box .list .imgBx
+    {
+        position: relative;
+        /* for new height and weight of the imgbx */
+        /* width: 200px;
+        height: 170px; */
+        width: 200px;
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 10px;
+
+    }
+    .box .list.imgBx img
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+    .box .list .content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+       
+    }
+    .box  .list .content .rank
+    {
+        /* top: 5px; */
+        position: absolute;
+        /* right: 5px; */
+        right: -50px;
+        color: #03a9f4;
+        transition: 0.5s;
+        font-size: 1.1em;
+    } 
+    .box  .list:hover .content .rank
+    {
+        /* right: 10px; */
+        left: 165px;
+
+    }
+    .box  .list .content .rank small
+    {
+        font-weight: 500;
+        opacity: 0.25;
+
+    }
+    .box .list .content h4
+    {
+        line-height: 1.2em;
+        font-weight: 600;
+        transition: 0.5s;
+
+    }
+    .box .list:hover .content h4,
+    .box .list:hover .content p
+    {
+        color:#333;
+
+    }
+    .box .list .content p
+    {
+        font-size: 0.75em;
+        transition: 0.5s;
+    }
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+    <!-- <header>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="page1.html" class="active"><span>Home</span> </a></li>
+                <li><a href="index.html"><span>Squid Game</span></a></li>
+                <li><a href="Guide.html"><span>Guide</span></a></li>
+                <li><a href="developer.html"><span>Developer</span></a></li>
+            </ul>
+        </div>
+    </header> -->
+    <section>
+        <div class="box">
+            <h3>Developer</h3>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="trapti.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank">D-12</h2>
+                    <h4>Trapti Gorbade</h4>
+                    <p>Leader</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="varenyam.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank">D-9</h2>
+                    <h4>Varenyam Nikam</h4>
+                    
+                </div>
+            </div> 
+            <div class="list">
+                <div class="imgBx">
+                    <img src="sShinde.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank">D-18</h2>
+                    <h4>Shreyash Shinde</h4>
+                 
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="Pritam.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank">D-27</h2>
+                    <h4>Pritam Fulari</h4>
+                    
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="komal.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank">D-31</h2>
+                    <h4>Komal Shingavi</h4>
+                    
+                </div>
+                
+            </div>
+            <form >
+                <input type="button" value="Go back!" onclick="history.back()">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
